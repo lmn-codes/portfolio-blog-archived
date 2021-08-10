@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: thomaswang/gatsby-personal-starter-blog
+  repo:  LinhNguyen-511/portfolio-blog
+  branch: master
 
 media_folder: content/assets
 public_folder: ../assets
