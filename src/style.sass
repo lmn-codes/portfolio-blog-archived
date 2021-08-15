@@ -16,6 +16,7 @@ $light-theme-color: #EEEBDD
 $red: #CD113B
 $dark-red: #810000
 $coal-black: #1B1717
+$grey: #A9A9A9
 
 /* COMMON STYLING 
 
@@ -35,11 +36,39 @@ h2, h3, h4, h5, h6
 .intro-text 
     span
         font-family: "Press Start 2P"
+
+    .split-text span 
+        font-family: "Gruppo"
+
+        span 
+            position: relative
+            bottom: -1em
+            opacity: 0
+            animation: move-text 0.05s forwards
         
 .intro-animation-container 
     svg     
         border: 10px solid $coal-black
         border-radius: 50%
+
+
+//animation
+    
+@keyframes move-text 
+    0% 
+        bottom: -0.5em
+        opacity: 1
+	
+	
+    50% 
+        bottom: 0.5em
+	
+
+    100% 
+        bottom: 0
+        opacity: 1
+	
+ 
 
 /* RESPONSIVE 
 // Mobile
