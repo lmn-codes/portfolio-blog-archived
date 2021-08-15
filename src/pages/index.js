@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
 			//   </Link>
 			// </Layout>
 			<main>
-				<h1>Hey be who you are for your pride</h1>
+		
 				<Intro />
 				<Projects />
 				<About />

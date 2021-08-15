@@ -1,0 +1,92 @@
+/* GLOBAL VARIABLES 
+$screen-s: 600px
+$screen-m: 768px
+$screen-l: 992px
+$screen-xl: 1200px
+
+$dark-theme-color: #542E71
+$primary-text-color:#FF7600
+$yellow: #FFC93C
+$light-green: #66DE93
+$light-blue: #64DFDF
+$lighter-blue: #DBF6E9
+$light-purle:#867AE9
+        
+$light-theme-color: #EEEBDD
+$red: #CD113B
+$dark-red: #810000
+$coal-black: #1B1717
+
+/* COMMON STYLING 
+
+*
+    cursor: url(circle-cursor.png) 15 15, auto
+
+body 
+    background: #EEEBDD
+    color: #CD113B
+
+h1
+    font-family: "Press Start 2P"
+
+h2, h3, h4, h5, h6
+    font-family: "Gruppo"
+
+.intro-text 
+    span
+        font-family: "Press Start 2P"
+        
+.intro-animation-container 
+    svg     
+        border: 10px solid $coal-black
+        border-radius: 50%
+
+/* RESPONSIVE 
+// Mobile
+@media (max-width: $screen-s)
+    .intro.section.wrapper 
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+    .intro-text 
+        span
+            font-size: 20px
+        h2
+            font-size: 15px    
+
+    .intro-animation-container       
+        display: none 
+
+// Desktop 
+@media (min-width: $screen-s)
+
+    .intro.section.wrapper 
+        display: flex
+        align-items: center
+        justify-content: space-between 
+        height: 100vh
+        max-width: 75vw
+        margin: 0 auto
+
+    .intro-animation-container 
+        max-width: 500px
+        max-height: 500px
+
+    .intro-text 
+        max-width: 75%
+        span
+            font-size: 30px
+
+
+@media (min-width: $screen-l)
+    .intro-text 
+        max-width: 50%
+        span
+            font-size: 40px
+
+@media (min-width: $screen-xl)              
+    .intro-text 
+        span
+            font-size: 50px
