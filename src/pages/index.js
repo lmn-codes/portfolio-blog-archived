@@ -1,48 +1,77 @@
-import React from "react";
-// import { Link } from "gatsby";
+import React, { useRef, useState, useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-// import Layout from "../components/layout";
-// import SEO from "../components/seo";
-// import Button from "../components/button";
+import useLocoScroll from "./../hooks/useLocoScroll";
 import Intro from "./../landing-page/intro";
 import Projects from "./../landing-page/projects";
 import About from "./../landing-page/about";
 
-class IndexPage extends React.Component {
-	render() {
-		// const siteTitle = "Linh's Portfolio";
 
-		return (
-			// <Layout location={this.props.location} title={siteTitle}>
-			//   <SEO
-			//     title="Home"
-			//     keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-			//   />
-			//   <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-			//   <h1>
-			//     Hey people{" "}
-			//     <span role="img" aria-label="wave emoji">
-			//       👋
-			//     </span>
-			//   </h1>
-			//   <p>Welcome to your new Gatsby website. You are on your home page.</p>
-			//   <p>
-			//     This starter comes out of the box with styled components and Gatsby's
-			//     default starter blog running on Netlify CMS.
-			//   </p>
-			//   <p>Now go build something great!</p>
-			//   <Link to="/blog/">
-			//     <Button marginTop="35px">Go to Blog</Button>
-			//   </Link>
-			// </Layout>
-			<main>
-		
-				<Intro />
-				<Projects />
-				<About />
-			</main>
-		);
+gsap.registerPlugin(ScrollTrigger);
+function IndexPage() {
+	const containerRef = useRef(null);
+
+	const [preloader, setPreload] = useState(true);
+
+	useLocoScroll(!preloader);
+
+	useEffect(() => {
+		if (!preloader && containerRef) {
+			if (typeof window === "undefined" || !window.document) {
+				return;
+			}
+		}
+	}, [preloader]);
+
+	const [timer, setTimer] = React.useState(1);
+
+	const id = React.useRef(null);
+
+	const clear = () => {
+		window.clearInterval(id.current);
+		setPreload(false);
+	};
+
+	React.useEffect(() => {
+		id.current = window.setInterval(() => {
+			setTimer((time) => time - 1);
+		}, 1000);
+		return () => clear();
+	}, []);
+
+	React.useEffect(() => {
+		if (timer === 0) {
+			clear();
+		}
+	}, [timer]);
+
+	if (typeof window === "undefined" || !window.document) {
+		return null;
 	}
+
+	return (
+		<>
+			{preloader ? (
+				<div className="loader-wrapper absolute">
+					<h1>Linh</h1>
+				</div>
+			) : (
+				<main
+					className="main-container"
+					id="main-container"
+					data-scroll-container
+					ref={containerRef}
+				>
+					<Intro />
+
+					<Projects />
+
+					<About />
+				</main>
+			)}
+		</>
+	);
 }
 
 export default IndexPage;

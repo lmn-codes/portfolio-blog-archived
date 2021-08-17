@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 function About() {
-	return (<div></div>);
+	return (<div data-scroll-section></div>);
 }
 
 export default About;

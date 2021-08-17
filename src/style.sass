@@ -18,6 +18,7 @@ $dark-red: #810000
 $coal-black: #1B1717
 $grey: #A9A9A9
 
+
 /* COMMON STYLING 
 
 *
@@ -32,6 +33,32 @@ h1
 
 h2, h3, h4, h5, h6
     font-family: "Gruppo"
+
+.absolute 
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: black
+    z-index: 1
+
+.loader-wrapper 
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    transition: "all 0.25s ease-in-out"
+    // background-color: #191919
+    // color: #dbd8d6
+      
+#main-container
+    height: 100%
+
+//LANDING PAGE: intro 
+.intro.section.wrapper     
+    height: 100vh
+    max-width: 75vw
 
 .intro-text 
     span
@@ -50,9 +77,124 @@ h2, h3, h4, h5, h6
     svg     
         border: 10px solid $coal-black
         border-radius: 50%
+        animation: show-animation 4s ease-in
+
+//LANDING PAGE: projects
+.projects.section.wrapper 
+    background-color: #d53f41
+    margin-left: -5vw
+    margin-right: -5vw
+
+.project-teaser-counter
+    position: absolute
+    top: 10%
+    left: 100px
+    z-index: 1
+    mix-blend-mode: difference
+    line-height: 16px
+    color: #dbd8d6  
+//   font-family: "Bai Jamjuree"
+//   font-weight: 600
+
+    font-size: 16px
+    -webkit-font-smoothing: antialiased
+    display: inline-block
+
+    .divider 
+        content: ""
+        background-color: white
+        width: 6.25vw
+        margin: 7px 10px
+        height: 1px
+        display: inline-block
+  
+
+
+.projects-container
+    height: 80vh
+    padding: 10vh 0
+    width: 400vw
+    display: flex
+    flex-wrap: nowrap
+
+    .project-teaser 
+        width: 100%
+        height: 100%
+        position: relative
+        will-change: transform
+  
+
+    .project-info
+        position: absolute
+        bottom: 10%
+        z-index: 1
+        transform: translateX(-20%)
+        color: #dbd8d6
+        color: white
+
+        .gallery-info-header 
+            line-height: 6vw
+            // font-family: "Bai Jamjuree"
+            // font-weight: 60         
+            font-size: 6vw
+            -webkit-font-smoothing: antialiased
+    
+
+        .gallery-info-name 
+            position: relative
+            line-height: 6vw
+            color: transparent
+            // font-family: "Bodoni Moda"
+            // font-weight: 400
+            font-size: 6vw
+            -webkit-font-smoothing: antialiased
+            -webkit-text-stroke: 2px #dbd8d6
+    
+
+        .gallery-info-summary 
+            position: relative
+            line-height: 24px
+            // font-family: "Bai Jamjuree"
+            // font-weight: 400
+            font-size: 24px
+            -webkit-font-smoothing: antialiased
+            margin-top: 2vh
+    
+  
+    .project-wrapper
+        aspect-ratio: 16/9
+        height: 100%
+        display: grid
+        grid-template-columns: 20vw 1fr 200px
+        width: 100vw
+
+        &.is-reveal 
+            .project-image
+                transform: scale(1)
+                filter: none
+      
+    
+  
+    .project-image
+        background-size: cover
+        background-position: center
+        transform-origin: center
+        width: 100%
+        height: 100%
+        will-change: transform
+        transform: scale(0.7)
+        transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1)
+        filter: grayscale(100%) sepia(20%) brightness(80%)
+  
 
 
 //animation
+@keyframes show-animation
+    0% 
+        opacity: 0
+    
+    100% 
+        opacity: 1   
     
 @keyframes move-text 
     0% 
@@ -95,8 +237,6 @@ h2, h3, h4, h5, h6
         display: flex
         align-items: center
         justify-content: space-between 
-        height: 100vh
-        max-width: 75vw
         margin: 0 auto
 
     .intro-animation-container 

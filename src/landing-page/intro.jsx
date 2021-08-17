@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, createRef } from "react";
+import React, { useEffect, createRef } from "react";
 import lottie from "lottie-web";
 import Baffle from "baffle-react";
 
@@ -20,21 +20,22 @@ function Intro() {
 	}, []);
 
 	const introSecondaryText =
-		"I build attractive, scalable and robust webapps.";
+		"I build attractive, scalable and robust webapps";
 
 	return (
-		<div className="intro section wrapper">
+		<div data-scroll-section className="intro section wrapper">
 			<div className="intro-text">
 				<Baffle
 					update={true}
 					obfuscate={false}
-					revealDuration={1000}
+					revealDuration={2000}
 					revealDelay={0}
+					characters={"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"}
 				>
-					The Front-end developer you are looking for.
+					The Front-end developer you are looking for
 				</Baffle>
 				<h2 className="split-text">
-					<SplitText string={introSecondaryText}></SplitText>
+					<SplitText string={introSecondaryText} delay={2.25}></SplitText>
 				</h2>
 			</div>
 			<div
