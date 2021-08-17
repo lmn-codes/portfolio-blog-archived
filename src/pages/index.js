@@ -7,14 +7,12 @@ import Intro from "./../landing-page/intro";
 import Projects from "./../landing-page/projects";
 import About from "./../landing-page/about";
 
-
 gsap.registerPlugin(ScrollTrigger);
 function IndexPage() {
+	
 	const containerRef = useRef(null);
 
 	const [preloader, setPreload] = useState(true);
-
-	useLocoScroll(!preloader);
 
 	useEffect(() => {
 		if (!preloader && containerRef) {
@@ -23,6 +21,8 @@ function IndexPage() {
 			}
 		}
 	}, [preloader]);
+	
+	useLocoScroll(!preloader);
 
 	const [timer, setTimer] = React.useState(1);
 
