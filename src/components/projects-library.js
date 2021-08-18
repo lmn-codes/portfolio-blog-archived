@@ -7,7 +7,7 @@ let projects = [
         The intention was to create a sub-store for e-commerce shops who wants to give their customer more 
         freedom to customize their products. The complete user experience is conceptualized and programmed
         by me. The website is deployed with CI/CD by me.`,
-        imageUrl: "",
+        imageUrl: "config1.png",
         links: [
             {
                 callToAction: "Read about my journey",
@@ -38,7 +38,7 @@ let projects = [
         as well as custom functionalities and UI components using PHP and JavaScript. In 4 months, I completed 
         2 web shops. 
         `,
-        imageUrl: "",
+        imageUrl: "config1.png",
         links: [
             {
                 callToAction: "Check out GiftAway",

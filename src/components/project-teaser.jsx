@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { StaticImage } from "gatsby-plugin-image"
 import cn from "classnames";
 
 import useOnScreen from "./../hooks/useOnScreen";
@@ -15,6 +16,7 @@ function ProjectTeaser({
 }) {
 	const ref = useRef(null);
 	const onScreen = useOnScreen(ref, "-25%");
+	const imageSrc = imageUrl
 
 	useEffect(() => {
 		if (onScreen) {
@@ -37,7 +39,9 @@ function ProjectTeaser({
 				<div
 					className="project-image"
 					style={{ backgroundImage: `url(${imageUrl})` }}
-				></div>
+				>
+				
+				</div>
 			</div>
 			<div></div>
 		</div>
