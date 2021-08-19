@@ -7,7 +7,7 @@ let projects = [
         The intention was to create a sub-store for e-commerce shops who wants to give their customer more 
         freedom to customize their products. The complete user experience is conceptualized and programmed
         by me. The website is deployed with CI/CD by me.`,
-        imageUrl: "config1.png",
+        images: ["https://i.ibb.co/92rgqc6/config2.png", "https://i.ibb.co/f4b2gK5/config3.png",],
         links: [
             {
                 callToAction: "Read about my journey",
@@ -38,7 +38,7 @@ let projects = [
         as well as custom functionalities and UI components using PHP and JavaScript. In 4 months, I completed 
         2 web shops. 
         `,
-        imageUrl: "config1.png",
+        images: ["https://i.ibb.co/tqF8YMh/gift.png",], 
         links: [
             {
                 callToAction: "Check out GiftAway",
@@ -71,7 +71,7 @@ let projects = [
         `This is my proud portfolio website created with Gatsby and React. I wanted to create a lightning-fast
         and smooth experience where I introduce myself and walk you through my work.
         `,
-        imageUrl: "",
+        images: ["",],
         links: [
             {
                 callToAction: "Read about my journey",

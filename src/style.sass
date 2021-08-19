@@ -31,7 +31,7 @@ body
 h1
     font-family: "Press Start 2P"
 
-h2, h3, h4, h5, h6
+h2, h3, h4, h5, h6, p
     font-family: "Gruppo"
 
 .absolute 
@@ -56,9 +56,11 @@ h2, h3, h4, h5, h6
     height: 100%
 
 //LANDING PAGE: intro 
-.intro.section.wrapper     
-    height: 100vh
-    max-width: 75vw
+.section.wrapper     
+    &.intro, &.about
+        height: 100vh
+        max-width: 75vw
+        margin: 0 auto
 
 .intro-text 
     span
@@ -185,6 +187,29 @@ h2, h3, h4, h5, h6
         transform: scale(0.7)
         transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1)
         filter: grayscale(100%) sepia(20%) brightness(80%)
+        // background-image: url('./images/config1.png')
+  
+
+.about.section 
+    display: flex
+    justify-content: center
+    text-align: center
+    padding: 10%
+    p 
+        font-size: 50px
+        opacity: 0
+        width: 100%
+        margin: 0 auto
+
+        &.is-reveal 
+            opacity: 1
+
+    
+.lineParent
+    overflow: hidden
+    .lineChildren
+        transform: translate(0, 500px)
+  
   
 
 
@@ -237,7 +262,6 @@ h2, h3, h4, h5, h6
         display: flex
         align-items: center
         justify-content: space-between 
-        margin: 0 auto
 
     .intro-animation-container 
         max-width: 500px
