@@ -192,10 +192,10 @@ h2, h3, h4, h5, h6, p
 
 .about.section 
     display: flex
-    justify-content: center
+    flex-direction: column
     text-align: center
     padding: 10%
-    p 
+    #headline
         font-size: 50px
         opacity: 0
         width: 100%
@@ -203,6 +203,16 @@ h2, h3, h4, h5, h6, p
 
         &.is-reveal 
             opacity: 1
+
+.techstack-wrapper 
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    
+.tech-logo
+    width: 200px
+    height: 200px
+    object-fit: contain
 
     
 .lineParent

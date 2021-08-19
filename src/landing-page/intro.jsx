@@ -23,7 +23,7 @@ function Intro() {
 		"I build attractive, scalable and robust webapps";
 
 	return (
-		<div data-scroll-section className="intro section wrapper">
+		<section data-scroll-section className="intro section wrapper">
 			<div className="intro-text">
 				<Baffle
 					update={true}
@@ -42,7 +42,7 @@ function Intro() {
 				className="intro-animation-container"
 				ref={animationContainer}
 			></div>
-		</div>
+		</section>
 	);
 }
 

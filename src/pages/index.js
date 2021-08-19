@@ -66,7 +66,7 @@ function IndexPage() {
 				>
 					<Intro />
 
-					<Projects />
+					{/* <Projects /> */}
 
 					<About />
 				</main>

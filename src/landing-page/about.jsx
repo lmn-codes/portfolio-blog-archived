@@ -11,6 +11,7 @@ import cn from "classnames";
 import gsap from "gsap";
 import SplitText from "./../utils/split3.min";
 import useOnScreen from "./../hooks/useOnScreen";
+import Techstack from "../components/techstack";
 
 export default function About() {
 	const ref = useRef(null);
@@ -51,6 +52,8 @@ export default function About() {
 			<p ref={ref} id="headline" className={cn({ "is-reveal": reveal })}>
 				This is all about me
 			</p>
+
+			<Techstack />
 		</section>
 	);
 }

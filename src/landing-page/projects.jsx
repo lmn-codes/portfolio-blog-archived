@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import projects from "./../components/projects-library";
+import projects from "./../libraries/projects-library";
 import ProjectTeaser from "./../components/project-teaser";
 
 function Projects() {
