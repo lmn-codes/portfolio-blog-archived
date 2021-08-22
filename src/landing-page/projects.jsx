@@ -30,7 +30,6 @@ function Projects() {
 					scrub: 0.5,
 					snap: 1 / (sections.length - 1),
 					trigger: ref.current,
-					scroller: "#main-container",
 					end: () => `+=${ref.current.offsetWidth}`,
 				},
 			});
