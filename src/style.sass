@@ -27,6 +27,10 @@ $grey: #A9A9A9
 body 
     background: #EEEBDD
     color: #CD113B
+    margin: 0px
+    width: 100%
+    min-height: 100%
+    overflow-x: hidden
 
 h1
     font-family: "Press Start 2P"
@@ -40,24 +44,20 @@ h2, h3, h4, h5, h6, p
     left: 0
     bottom: 0
     right: 0
-    background-color: black
-    z-index: 1
-
+  
 .loader-wrapper 
+    cursor: none
     display: flex
     align-items: center
     justify-content: center
-    flex-direction: column
     transition: "all 0.25s ease-in-out"
-    // background-color: #191919
-    // color: #dbd8d6
-      
+
 #main-container
     height: 100%
 
 //LANDING PAGE: intro 
 .section.wrapper     
-    &.intro, &.about
+    &.intro
         height: 100vh
         max-width: 75vw
         margin: 0 auto
@@ -84,8 +84,7 @@ h2, h3, h4, h5, h6, p
 //LANDING PAGE: projects
 .projects.section.wrapper 
     background-color: #d53f41
-    margin-left: -5vw
-    margin-right: -5vw
+    overflow: hidden
 
 .project-teaser-counter
     position: absolute
@@ -109,13 +108,10 @@ h2, h3, h4, h5, h6, p
         margin: 7px 10px
         height: 1px
         display: inline-block
-  
-
-
+      
 .projects-container
     height: 80vh
     padding: 10vh 0
-    width: 400vw
     display: flex
     flex-wrap: nowrap
 
@@ -190,29 +186,58 @@ h2, h3, h4, h5, h6, p
         // background-image: url('./images/config1.png')
   
 
-.about.section 
-    display: flex
-    flex-direction: column
-    text-align: center
-    padding: 10%
-    #headline
+// LANDING PAGE: about
+.about.section
+    position: absolute
+    width: 99vw
+    height: 100vh
+
+.background-grid 
+    display: grid
+    grid-template-columns: repeat(9, 1fr)
+    grid-template-rows: repeat(6, 1fr)
+    position: relative
+    margin: 0 auto
+    width: 100%
+
+    #summary
         font-size: 50px
         opacity: 0
-        width: 100%
-        margin: 0 auto
+        grid-area: 3/3/5/8
 
+        
         &.is-reveal 
             opacity: 1
-
-.techstack-wrapper 
-    display: grid
-    grid-template-columns: repeat(6, 1fr)
-    grid-template-rows: repeat(3, 1fr)
     
-.tech-logo
-    width: 200px
-    height: 200px
-    object-fit: contain
+.tech    
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    animation: moveUpDown 3s linear infinite
+
+    .tech-logo
+        width: 25%
+        height: auto
+        // width: 50px
+        // height: 50px
+        object-fit: contain
+
+    .tooltip 
+        visibility: hidden
+        position: relative
+        width: max-content
+        z-index: 1
+        background: $coal-black
+        opacity: 50%
+        color: white
+        border-radius: 5px
+        padding: 2px 5px
+    &:hover
+        .tooltip
+            visibility: visible
+            
 
     
 .lineParent
@@ -221,8 +246,6 @@ h2, h3, h4, h5, h6, p
         transform: translate(0, 500px)
   
   
-
-
 //animation
 @keyframes show-animation
     0% 
@@ -244,8 +267,14 @@ h2, h3, h4, h5, h6, p
     100% 
         bottom: 0
         opacity: 1
-	
- 
+
+@keyframes moveUpDown
+    0%, 100% 
+        bottom: 0
+  
+    50% 
+        bottom: 10px
+
 
 /* RESPONSIVE 
 // Mobile

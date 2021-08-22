@@ -10,7 +10,7 @@ import About from "./../landing-page/about";
 gsap.registerPlugin(ScrollTrigger);
 function IndexPage() {
 	const containerRef = useRef(null);
-	
+
 	// create state for splash screen
 	const [preloader, setPreload] = useState(true);
 	// check if the window and document objex are there (not SSR)
@@ -66,7 +66,7 @@ function IndexPage() {
 				>
 					<Intro />
 
-					{/* <Projects /> */}
+					<Projects />
 
 					<About />
 				</main>
