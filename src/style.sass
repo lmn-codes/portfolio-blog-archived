@@ -79,6 +79,24 @@ a, button
     justify-content: space-between
     align-items: center
 
+    .drop-down-menu
+        position: absolute
+        right: 0
+        display: flex
+        flex-direction: column
+        align-items: end
+
+        button
+            margin-top: 5px
+            width: max-content
+
+            a
+                color: $red
+
+            &:hover
+                a
+                    color: white
+            
 
     .logo
         display: grid
@@ -265,10 +283,14 @@ a, button
     height: 100%
 
     #summary
-        font-size: 50px
+        font-size: 30px
+        text-align: center
         opacity: 0
         grid-area: 3/3/5/8
 
+        .objective
+            font-family: "Bai Jamjuree"
+            font-weight: bolder
         
         &.is-reveal 
             opacity: 1

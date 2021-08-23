@@ -31,7 +31,7 @@ function Techstack() {
 			duration: 1,
 			y: 0,
 			opacity: 1,
-			stagger: 2,
+			stagger: 0.5,
 			ease: "power2",
 		});
 	}, [reveal]);
@@ -40,7 +40,14 @@ function Techstack() {
 		<div className="background-grid">
 			{/* summary about me in the middle of the grid */}
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
-				A versatile Front-end with Full-stack skills and experiences. 
+				Although any area within web development is my playground, 
+				I have the most fun crafting features and implementing 
+				advanced design. Because of that, I always aim for a pleasant, intuitive and attractive user experience <br/>
+				<span className="objective">
+					I am looking for an opportunity to work on complex  
+					projects with large user base as I want to explore topics like: 
+					state management, security and interactice websites
+				</span>
 			</p>
 
 			{/*tech I use dispersed around summary about me */}

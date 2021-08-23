@@ -1,24 +1,57 @@
-import React from 'react'
+import React, { useState } from "react";
 
 function MenuBar() {
-    return (
-        <div id="menu-bar">
-            <div className="logo">
-                <p>L</p>
-                <p>I</p>
-                <p>N</p>
-                <p>H</p>
-            </div>
-            <div className="sections-summary">
-                <p><a href="#intro-section"><span className="section-number">1. </span> Introduction</a></p>
-                <p><a href="#projects-section"><span className="section-number">2. </span> Projects</a></p>
-                <p><a href="#about-section"><span className="section-number">3. </span> About Me</a></p>
-                <button className="contact-button">
-                    Let's talk!
-                </button>
-            </div>
-        </div>
-    )
+	const [showMenu, setShowMenu] = useState(false);
+
+	return (
+		<div id="menu-bar">
+			<div className="logo">
+				<p>L</p>
+				<p>I</p>
+				<p>N</p>
+				<p>H</p>
+			</div>
+			<div className="sections-summary">
+				<p>
+					<a href="#intro-section">
+						<span className="section-number">1. </span> Introduction
+					</a>
+				</p>
+				<p>
+					<a href="#projects-section">
+						<span className="section-number">2. </span> Projects
+					</a>
+				</p>
+				<p>
+					<a href="#about-section">
+						<span className="section-number">3. </span> About Me
+					</a>
+				</p>
+
+				<div className="menu-contacts">
+					<button className="contact-button" onClick={()=>setShowMenu(!showMenu)}>
+						Let's talk!
+					</button>
+
+					{showMenu ? (
+						<div className="drop-down-menu">
+							<button className="contact-button">
+								<a href="https://www.linkedin.com/in/linhnguyen511/">
+									Linkedin
+								</a>
+							</button>
+							<button className="contact-button">
+								<a href="mailto:mlinhng05@gmail.com">Email</a>
+							</button>
+							<button className="contact-button">
+								+31 641942871
+							</button>
+						</div>
+					) : null}
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default MenuBar
+export default MenuBar;
