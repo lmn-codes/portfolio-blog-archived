@@ -31,15 +31,17 @@ function Techstack() {
 			duration: 1,
 			y: 0,
 			opacity: 1,
-			stagger: 0.5,
+			stagger: 0.25,
 			ease: "power2",
 		});
 	}, [reveal]);
 
 	return (
+		
 		<div className="background-grid">
 			{/* summary about me in the middle of the grid */}
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
+				<span className="about-me-title">About me</span>
 				Although any area within web development is my playground, 
 				I have the most fun crafting features and implementing 
 				advanced design. Because of that, I always aim for a pleasant, intuitive and attractive user experience <br/>

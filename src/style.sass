@@ -1,4 +1,5 @@
 /* GLOBAL VARIABLES 
+$screen-xs: 480px    
 $screen-s: 600px
 $screen-m: 768px
 $screen-l: 992px
@@ -62,7 +63,7 @@ a, button
 
     .split-text
         span
-            font-family: "Press Start 2P"
+            font-family: "Gruppo"
 
 #main-container
     height: 100%
@@ -84,7 +85,7 @@ a, button
         right: 0
         display: flex
         flex-direction: column
-        align-items: end
+        align-items: flex-end
 
         button
             margin-top: 5px
@@ -95,8 +96,7 @@ a, button
 
             &:hover
                 a
-                    color: white
-            
+                    color: white                   
 
     .logo
         display: grid
@@ -125,19 +125,6 @@ a, button
 
         .section-number
             color: $coal-black
-    
-    .contact-button
-        padding: 5px 10px
-        border: 2px solid $red
-        color: $red
-        border-radius: 5px
-        background: $light-theme-color
-
-        &:hover
-            background: $red
-            color: white
-
-        
         
 
 //LANDING PAGE: intro 
@@ -272,29 +259,10 @@ a, button
     position: absolute
     width: 99vw
     height: 100vh
-
-.background-grid 
-    display: grid
-    grid-template-columns: repeat(9, 1fr)
-    grid-template-rows: repeat(6, 1fr)
-    position: relative
-    margin: 0 auto
-    width: 100%
-    height: 100%
-
-    #summary
-        font-size: 30px
-        text-align: center
-        opacity: 0
-        grid-area: 3/3/5/8
-
-        .objective
-            font-family: "Bai Jamjuree"
-            font-weight: bolder
-        
-        &.is-reveal 
-            opacity: 1
     
+    .about-me-title
+        color: $coal-black
+        text-decoration: underline
 .tech    
     position: relative
     display: flex
@@ -320,6 +288,7 @@ a, button
         color: white
         border-radius: 5px
         padding: 2px 5px
+
     &:hover
         .tooltip
             visibility: visible
@@ -364,28 +333,31 @@ a, button
 
 /* RESPONSIVE 
 // Mobile
-@media (max-width: $screen-s)
+@media (max-width: $screen-xs)   
     #menu-bar
         p, button
             font-size: 10px
-        .contact-button
-            padding: 0    
+
+    .contact-button
+        border: 2px solid $red
+        color: $red
+        border-radius: 5px
+        background: $light-theme-color
+
+        &:hover
+            background: $red
+            color: white          
+
+    .project-teaser-counter
+        top: 0 !important
 
     .intro.section.wrapper 
         display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
-        text-align: center
-
-    .intro-text 
-        span
-            font-size: 20px
-        h2
-            font-size: 15px    
 
     .intro-animation-container       
-        display: none 
+        display: none   
 
     .project-teaser
         .project-info
@@ -398,18 +370,99 @@ a, button
             font-size: 10px      
 
         .project-link a
-            font-size: 10px    
+            font-size: 10px
+
+    .about.section
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .tech
+        display: none
+
+    .background-grid 
+        text-align: center    
+
+    #summary
+        font-size: 20px  
+        .objective
+            font-family: "Bai Jamjuree"
+            font-weight: bolder
+        
+        &.is-reveal 
+            opacity: 1
+
+@media (min-width: $screen-xs)
+    #menu-bar
+        p, button
+            font-size: 10px
+        .contact-button
+            border: 2px solid $red
+            color: $red
+            border-radius: 5px
+            background: $light-theme-color
+
+            &:hover
+                background: $red
+                color: white          
+
+    .intro-animation-container  
+        width: 200px
+        height: 200px 
+
+    .intro.section.wrapper 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+
+    .intro-text 
+        span
+            font-size: 20px
+        h2
+            font-size: 15px      
+      
+    .project-teaser
+        .project-info
+            overflow-y: scroll
+        h1
+            font-size: 20px    
+        h2
+            font-size: 15px
+        p
+            font-size: 10px      
+
+        .project-link a
+            font-size: 10px
+
+    .background-grid 
+        display: grid
+        grid-template-columns: repeat(9, 1fr)
+        grid-template-rows: repeat(6, 1fr)
+        position: relative
+        margin: 0 auto
+        width: 100%
+        height: 100%
+
+    #summary
+        text-align: center
+        opacity: 0
+        grid-area: 3/3/5/8
+        font-size: 10px  
+        .objective
+            font-family: "Bai Jamjuree"
+            font-weight: bolder
+        
+        &.is-reveal 
+            opacity: 1
+      
 
 // Desktop 
 @media (min-width: $screen-s)
-    .intro.section.wrapper 
-        display: flex
-        align-items: center
-        justify-content: space-between 
-
-    .intro-animation-container 
-        max-width: 500px
-        max-height: 500px
+    #menu-bar
+        p, button
+            font-size: 15px 
 
     .intro-text 
         max-width: 75%
@@ -428,16 +481,26 @@ a, button
             font-size: 15px
         p
             font-size: 10px   
+            
         .project-link a
             font-size: 15px        
 
-
-
 @media (min-width: $screen-l)
+    .intro.section.wrapper 
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+    .intro-animation-container 
+        width: 400px
+        height: 400px
+
     .intro-text 
         max-width: 50%
         span
-            font-size: 40px
+            font-size: 30px
+
     .project-teaser
         .project-info
             overflow-y: hidden
@@ -447,9 +510,11 @@ a, button
             font-size: 25px
         p
             font-size: 20px   
+    #summary
+        font-size: 25px          
 
 
 @media (min-width: $screen-xl)              
     .intro-text 
         span
-            font-size: 50px
+            font-size: 40px
