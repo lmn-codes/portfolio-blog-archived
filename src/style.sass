@@ -3,20 +3,12 @@ $screen-s: 600px
 $screen-m: 768px
 $screen-l: 992px
 $screen-xl: 1200px
-
-$dark-theme-color: #542E71
-$primary-text-color:#FF7600
-$yellow: #FFC93C
-$light-green: #66DE93
-$light-blue: #64DFDF
-$lighter-blue: #DBF6E9
-$light-purle:#867AE9
         
 $light-theme-color: #EEEBDD
 $red: #CD113B
 $dark-red: #810000
 $coal-black: #1B1717
-$grey: #A9A9A9
+
 
 
 /* COMMON STYLING 
@@ -30,13 +22,29 @@ body
     margin: 0px
     width: 100%
     min-height: 100%
-    overflow-x: hidden
+    overflow: hidden
 
 h1
     font-family: "Press Start 2P"
+    margin: 1rem 0 !important
 
 h2, h3, h4, h5, h6, p
     font-family: "Gruppo"
+
+h2        
+    margin: 0.5rem 0 !important    
+
+a
+    font-family: "Bai Jamjuree"     
+    box-shadow: none
+    text-decoration: none   
+
+    &:hover
+        font-style: italic   
+        text-decoration: underline
+
+a, button    
+    cursor: pointer    
 
 .absolute 
     position: fixed
@@ -52,8 +60,67 @@ h2, h3, h4, h5, h6, p
     justify-content: center
     transition: "all 0.25s ease-in-out"
 
+    .split-text
+        span
+            font-family: "Press Start 2P"
+
 #main-container
     height: 100%
+
+//LANDING PAGE: Menubar
+#menu-bar
+    position: absolute
+    top: 0 
+    left: 2vw
+    right: 2vw
+    width: 96vw
+    height: 10vh
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+    .logo
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        width: 50px
+        height: 50px    
+        text-align: center
+
+        p   
+            font-weight: bolder
+            margin-bottom: 0 
+
+    & > *
+        font-family: "Bai Jamjuree"
+    
+
+    .sections-summary
+        display: flex
+        align-items: center
+        p 
+            margin-bottom: 0 
+            a
+                color: $red
+                margin: 0 15px
+
+        .section-number
+            color: $coal-black
+    
+    .contact-button
+        padding: 5px 10px
+        border: 2px solid $red
+        color: $red
+        border-radius: 5px
+        background: $light-theme-color
+
+        &:hover
+            background: $red
+            color: white
+
+        
+        
 
 //LANDING PAGE: intro 
 .section.wrapper     
@@ -66,14 +133,14 @@ h2, h3, h4, h5, h6, p
     span
         font-family: "Press Start 2P"
 
-    .split-text span 
-        font-family: "Gruppo"
+.split-text span 
+    font-family: "Gruppo"
 
-        span 
-            position: relative
-            bottom: -1em
-            opacity: 0
-            animation: move-text 0.05s forwards
+    span 
+        position: relative
+        bottom: -1em
+        opacity: 0
+        animation: move-text 0.05s forwards
         
 .intro-animation-container 
     svg     
@@ -83,108 +150,104 @@ h2, h3, h4, h5, h6, p
 
 //LANDING PAGE: projects
 .projects.section.wrapper 
-    background-color: #d53f41
     overflow: hidden
-
-.project-teaser-counter
-    position: absolute
-    top: 10%
-    left: 100px
-    z-index: 1
-    mix-blend-mode: difference
-    line-height: 16px
-    color: #dbd8d6  
-//   font-family: "Bai Jamjuree"
-//   font-weight: 600
-
-    font-size: 16px
-    -webkit-font-smoothing: antialiased
-    display: inline-block
-
-    .divider 
-        content: ""
-        background-color: white
-        width: 6.25vw
-        margin: 7px 10px
-        height: 1px
-        display: inline-block
       
 .projects-container
-    height: 80vh
-    padding: 10vh 0
     display: flex
-    flex-wrap: nowrap
+    flex-direction: column
+    justify-content: space-between
 
-    .project-teaser 
-        width: 100%
-        height: 100%
-        position: relative
-        will-change: transform
-  
-
-    .project-info
+    .project-teaser-counter
         position: absolute
-        bottom: 10%
+        top: 5%
+        left: 100px
         z-index: 1
-        transform: translateX(-20%)
-        color: #dbd8d6
-        color: white
+        mix-blend-mode: difference
+        line-height: 16px
+        color: $red 
+        font-size: 16px
+        -webkit-font-smoothing: antialiased
+        display: inline-block
 
-        .gallery-info-header 
-            line-height: 6vw
-            // font-family: "Bai Jamjuree"
-            // font-weight: 60         
-            font-size: 6vw
-            -webkit-font-smoothing: antialiased
-    
+        .divider 
+            content: ""
+            background-color: $red
+            width: 6.25vw
+            margin: 7px 10px
+            height: 1px
+            display: inline-block
 
-        .gallery-info-name 
-            position: relative
-            line-height: 6vw
-            color: transparent
-            // font-family: "Bodoni Moda"
-            // font-weight: 400
-            font-size: 6vw
-            -webkit-font-smoothing: antialiased
-            -webkit-text-stroke: 2px #dbd8d6
-    
-
-        .gallery-info-summary 
-            position: relative
-            line-height: 24px
-            // font-family: "Bai Jamjuree"
-            // font-weight: 400
-            font-size: 24px
-            -webkit-font-smoothing: antialiased
-            margin-top: 2vh
-    
-  
-    .project-wrapper
-        aspect-ratio: 16/9
-        height: 100%
-        display: grid
-        grid-template-columns: 20vw 1fr 200px
-        width: 100vw
-
-        &.is-reveal 
-            .project-image
-                transform: scale(1)
-                filter: none
-      
-    
-  
-    .project-image
-        background-size: cover
-        background-position: center
-        transform-origin: center
+    .projects-wrapper
         width: 100%
         height: 100%
-        will-change: transform
-        transform: scale(0.7)
-        transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1)
-        filter: grayscale(100%) sepia(20%) brightness(80%)
-        // background-image: url('./images/config1.png')
-  
+        display: flex
+        flex-wrap: nowrap
+
+        .project-wrapper
+            width: 100%
+            height: 100%
+            margin: 5% 
+
+            &.is-reveal 
+                .project-image
+                    transform: scale(1)
+                    filter: none
+
+        .project-techstack
+            display: flex
+            .tech
+                animation: none
+                width: 3%
+            .tech-logo
+                height: 30px
+                width: 30px
+
+        .project-teaser 
+            width: 80vw
+            position: relative
+            will-change: transform
+            display: flex
+            align-items: center
+
+            .project-info
+                padding: 0 35% 0 5% 
+                position: relative
+                color: white
+                background-color: $red
+                width: 60vw
+                height: 60vh
+
+                .project-info-title
+                    font-style: italic
+
+                .project-info-summary
+                    font-weight: bolder
+
+                .project-link a
+                    cursor: pointer
+                    color: white
+
+                    &::after
+                        content: ' >'
+                        font-weight: 900 
+
+                       
+            .project-image
+                position: absolute
+                aspect-ratio: 16/9
+                width: 50%
+                height: auto
+                right: 0
+                z-index: 2
+                will-change: transform
+                transform: scale(0.7)
+                transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1)
+                filter: grayscale(100%) sepia(20%) brightness(80%)
+    
+    .github-link 
+        color: $red
+        text-decoration: none
+
 
 // LANDING PAGE: about
 .about.section
@@ -199,6 +262,7 @@ h2, h3, h4, h5, h6, p
     position: relative
     margin: 0 auto
     width: 100%
+    height: 100%
 
     #summary
         font-size: 50px
@@ -279,9 +343,16 @@ h2, h3, h4, h5, h6, p
 /* RESPONSIVE 
 // Mobile
 @media (max-width: $screen-s)
+    #menu-bar
+        p, button
+            font-size: 10px
+        .contact-button
+            padding: 0    
+
     .intro.section.wrapper 
         display: flex
         flex-direction: column
+        justify-content: center
         align-items: center
         text-align: center
 
@@ -294,9 +365,21 @@ h2, h3, h4, h5, h6, p
     .intro-animation-container       
         display: none 
 
+    .project-teaser
+        .project-info
+            overflow-y: scroll
+        h1
+            font-size: 20px    
+        h2
+            font-size: 15px
+        p
+            font-size: 10px      
+
+        .project-link a
+            font-size: 10px    
+
 // Desktop 
 @media (min-width: $screen-s)
-
     .intro.section.wrapper 
         display: flex
         align-items: center
@@ -310,6 +393,22 @@ h2, h3, h4, h5, h6, p
         max-width: 75%
         span
             font-size: 30px
+    
+    .project-teaser
+        .project-info
+            overflow-y: scroll
+            display: flex
+            flex-direction: column
+            justify-content: center
+        h1
+            font-size: 20px    
+        h2
+            font-size: 15px
+        p
+            font-size: 10px   
+        .project-link a
+            font-size: 15px        
+
 
 
 @media (min-width: $screen-l)
@@ -317,6 +416,16 @@ h2, h3, h4, h5, h6, p
         max-width: 50%
         span
             font-size: 40px
+    .project-teaser
+        .project-info
+            overflow-y: hidden
+        h1
+            font-size: 30px    
+        h2
+            font-size: 25px
+        p
+            font-size: 20px   
+
 
 @media (min-width: $screen-xl)              
     .intro-text 

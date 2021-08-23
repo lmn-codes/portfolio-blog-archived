@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fontsource/bai-jamjuree": "^4.5.0",
     "@fontsource/gruppo": "^4.5.0",
     "@fontsource/major-mono-display": "^4.5.0",
     "@fontsource/press-start-2p": "^4.5.0",

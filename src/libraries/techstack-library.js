@@ -143,6 +143,22 @@ let techstack = [
         rowEnd: 7,
         colEnd: 10,
     },
+    {
+        name: 'TypeScript',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png',
+        rowStart: 6,
+        colStart: 8,
+        rowEnd: 7,
+        colEnd: 9,
+    },
+    {
+        name: 'Gatsby',
+        logo: 'https://res.cloudinary.com/practicaldev/image/fetch/s--Fda3jJaA--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2653/80840bff-1061-4544-841e-86da7aa1dd8e.png',
+        rowStart: 6,
+        colStart: 1,
+        rowEnd: 7,
+        colEnd: 2,
+    },
 ]
 
 export default techstack

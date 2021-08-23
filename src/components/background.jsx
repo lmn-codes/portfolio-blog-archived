@@ -40,7 +40,7 @@ function Techstack() {
 		<div className="background-grid">
 			{/* summary about me in the middle of the grid */}
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
-				This is all about me
+				A versatile Front-end with Full-stack skills and experiences. 
 			</p>
 
 			{/*tech I use dispersed around summary about me */}

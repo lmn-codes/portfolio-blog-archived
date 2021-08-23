@@ -11,10 +11,7 @@ function Projects() {
 	const ref = useRef(null);
 
 	useEffect(() => {
-		// This does not seem to work without a settimeout
-		// console.log(ref.current.offsetWidth);
-		// console.log(ref.current.clientWidth);
-		// console.log({ current: ref.current });
+		// This does not seem to work without a setTimeout
 
 		setTimeout(() => {
 			let sections = gsap.utils.toArray(".project-wrapper");
@@ -54,16 +51,21 @@ function Projects() {
 				</div>
 
 				{/* render the projects */}
-				{projects.map((project, index) => {
-					return (
-						<ProjectTeaser
-							key={project.projectName}
-							index={index}
-							{...project}
-							updateActiveImage={handleUpdateActiveImage}
-						/>
-					);
-				})}
+				<div className="projects-wrapper">
+					{projects.map((project, index) => {
+						return (
+							<ProjectTeaser
+								key={project.projectName}
+								index={index}
+								{...project}
+								updateActiveImage={handleUpdateActiveImage}
+							/>
+						);
+					})}
+					
+				</div>
+
+				{/* <a href="" className="github-link">More on my GitHub</a> */}
 			</div>
 		</section>
 	);

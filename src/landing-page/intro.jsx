@@ -23,7 +23,7 @@ function Intro() {
 		"I build attractive, scalable and robust webapps";
 
 	return (
-		<section data-scroll-section className="intro section wrapper">
+		<section data-scroll-section id="intro-section" className="intro section wrapper">
 			<div className="intro-text">
 				<Baffle
 					update={true}
@@ -35,7 +35,7 @@ function Intro() {
 					The Front-end developer you are looking for
 				</Baffle>
 				<h2 className="split-text">
-					<SplitText string={introSecondaryText} delay={2.25}></SplitText>
+					<SplitText string={introSecondaryText} delay={2}></SplitText>
 				</h2>
 			</div>
 			<div

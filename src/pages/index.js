@@ -6,6 +6,8 @@ import useLocoScroll from "./../hooks/useLocoScroll";
 import Intro from "./../landing-page/intro";
 import Projects from "./../landing-page/projects";
 import About from "./../landing-page/about";
+import MenuBar from "./../components/menu";
+import SplitText from "./../components/split-text";
 
 gsap.registerPlugin(ScrollTrigger);
 function IndexPage() {
@@ -23,7 +25,7 @@ function IndexPage() {
 	}, [preloader]);
 
 	// splash screen lasts 3 secs
-	const [timer, setTimer] = useState(3);
+	const [timer, setTimer] = useState(1);
 	const id = useRef(null);
 
 	useEffect(() => {
@@ -55,7 +57,12 @@ function IndexPage() {
 		<>
 			{preloader ? (
 				<div className="loader-wrapper absolute">
-					<h1>Linh</h1>
+					<h1 className="split-text">
+						<SplitText
+							string="LINH"
+							delay={0}
+						></SplitText>
+					</h1>
 				</div>
 			) : (
 				<main
@@ -64,6 +71,8 @@ function IndexPage() {
 					data-scroll-container
 					ref={containerRef}
 				>
+					<MenuBar />
+
 					<Intro />
 
 					<Projects />
