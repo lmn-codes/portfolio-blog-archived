@@ -7,6 +7,7 @@ import Intro from "./../landing-page/intro";
 import Projects from "./../landing-page/projects";
 import About from "./../landing-page/about";
 import MenuBar from "./../components/menu";
+import Footer from "./../components/footer";
 import SplitText from "./../components/split-text";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -78,6 +79,8 @@ function IndexPage() {
 					<Projects />
 
 					<About />
+
+					<Footer />
 				</main>
 			)}
 		</>

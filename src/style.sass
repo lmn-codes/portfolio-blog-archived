@@ -63,7 +63,12 @@ a, button
 
     .split-text
         span
-            font-family: "Gruppo"
+            font-family: "Press Start 2P"
+            text-stroke: 2px $red
+            -webkit-text-stroke: 2px $red
+            color: $light-theme-color
+            font-size: 50px
+            letter-spacing: 25px
 
 #main-container
     height: 100%
@@ -256,7 +261,7 @@ a, button
 
 // LANDING PAGE: about
 .about.section
-    position: absolute
+    // position: absolute
     width: 99vw
     height: 100vh
     
@@ -291,6 +296,8 @@ a, button
 
     &:hover
         .tooltip
+            // display block make sure that the tooltip show on hover in chrome
+            display: block
             visibility: visible
             
 
@@ -300,7 +307,18 @@ a, button
     .lineChildren
         transform: translate(0, 500px)
   
-  
+#footer
+    position: absolute
+    left: 0  
+    width: 100%
+    text-align: center
+    background: $red
+
+    p
+        margin-bottom: 0
+        color: white
+        font-weight: bolder
+
 //animation
 @keyframes show-animation
     0% 
@@ -312,7 +330,7 @@ a, button
 @keyframes move-text 
     0% 
         bottom: -0.5em
-        opacity: 1
+        opacity: 0
 	
 	
     50% 
@@ -335,6 +353,9 @@ a, button
 // Mobile
 @media (max-width: $screen-xs)   
     #menu-bar
+        .section-anchor
+            display: none
+  
         p, button
             font-size: 10px
 
@@ -391,6 +412,7 @@ a, button
         
         &.is-reveal 
             opacity: 1
+
 
 @media (min-width: $screen-xs)
     #menu-bar
@@ -462,7 +484,7 @@ a, button
 @media (min-width: $screen-s)
     #menu-bar
         p, button
-            font-size: 15px 
+            font-size: 12px 
 
     .intro-text 
         max-width: 75%
@@ -483,7 +505,12 @@ a, button
             font-size: 10px   
             
         .project-link a
-            font-size: 15px        
+            font-size: 15px  
+
+@media (min-width: $screen-m)    
+    #menu-bar
+        p, button
+            font-size: 15px       
 
 @media (min-width: $screen-l)
     .intro.section.wrapper 
