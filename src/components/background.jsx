@@ -41,7 +41,7 @@ function Techstack() {
 		<div className="background-grid">
 			{/* summary about me in the middle of the grid */}
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
-				<span className="about-me-title">About me</span>
+				<span className="about-me-title">About me</span> <br/>
 				Although any area within web development is my playground, 
 				I have the most fun crafting features and implementing 
 				advanced design. Because of that, I always aim for a pleasant, intuitive and attractive user experience <br/>

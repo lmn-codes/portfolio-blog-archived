@@ -4,7 +4,7 @@ let projects = [
         projectName: "Configurator",
         summary: 
         `This is the MVP of our configurator - a full-stack project built by me and one of my colleagues. 
-        The intention was to create a sub-store for e-commerce shops who wants to give their customer more 
+        The intention was to create a sub-store for e-commerce shops who want to give their customer more 
         freedom to customize their products. The complete user experience is conceptualized and programmed
         by me. The website is deployed with CI/CD by me.`,
         imageUrl: "https://i.ibb.co/f4b2gK5/config3.png",
@@ -77,7 +77,7 @@ let projects = [
         projectName: "My Portfolio",
         summary: 
         `This is my proud portfolio website created with Gatsby and React. I wanted to create a lightning-fast
-        and smooth experience where I introduce myself and walk you through my work.
+        and smooth experience where I introduce myself and walk you through my work. Did I achieve this goal? ;)
         `,
         imageUrl: "https://i.ibb.co/XsQ3Jvn/Screenshot-from-2021-08-23-13-14-31.png",
         links: [

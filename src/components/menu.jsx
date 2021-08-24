@@ -28,7 +28,7 @@ function MenuBar() {
 					</a>
 				</p>
 				<p>
-					<a href="https://github.com/LinhNguyen-511">
+					<a href="https://github.com/LinhNguyen-511" target="_blank">
 						GitHub
 					</a>
 				</p>
@@ -46,7 +46,7 @@ function MenuBar() {
 					{showMenu ? (
 						<div className="drop-down-menu">
 							<button className="contact-button">
-								<a href="https://www.linkedin.com/in/linhnguyen511/">
+								<a href="https://www.linkedin.com/in/linhnguyen511/" target="_blank">
 									Linkedin
 								</a>
 							</button>
