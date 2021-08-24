@@ -37,18 +37,21 @@ function Techstack() {
 	}, [reveal]);
 
 	return (
-		
 		<div className="background-grid">
 			{/* summary about me in the middle of the grid */}
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
-				<span className="about-me-title">About me</span> <br/>
-				Although any area within web development is my playground, 
-				I have the most fun crafting features and implementing 
-				advanced design. Because of that, I always aim for a pleasant, intuitive and attractive user experience <br/>
+				<span className="about-me-title">About me</span> <br />
+				<span className="about-me">
+					Although any area within web development is my playground, I
+					have the most fun crafting features and implementing
+					advanced design. Because of that, I always aim for a
+					pleasant, intuitive and attractive user experience
+				</span>
+				<br />
 				<span className="objective">
-					I am looking for an opportunity to work on complex  
-					projects with large user base as I want to explore topics like: 
-					state management, security and interactice websites
+					I am looking for an opportunity to work on complex projects
+					with large user base as I want to explore topics like: state
+					management, security and interactice websites
 				</span>
 			</p>
 
