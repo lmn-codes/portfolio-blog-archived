@@ -1,7 +1,7 @@
 # My Portfolio
 This is the making of my portfolio using Gatsby and React for a lightning:zap:-fast experience. Thanks to Netlify, I can deploy it quick and easy.
 
-### :round_pushpin: Features I developed
+### :round_pushpin: Features 
 - Animations
 - Horizontal scroll with GSAP and Locomotive Scroll 
 
