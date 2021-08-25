@@ -1,4 +1,4 @@
-# My Portfolio | [LIVE](https://linh-tech.netlify.app/)
+# :card_index_dividers: My Portfolio | [LIVE](https://linh-tech.netlify.app/)
 This is the making of my portfolio using Gatsby and React for a lightning:zap:-fast experience. Thanks to Netlify, I can deploy it quick and easy.
 
 ### :round_pushpin: Features 
