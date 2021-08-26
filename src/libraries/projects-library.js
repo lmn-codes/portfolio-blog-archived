@@ -13,14 +13,10 @@ let projects = [
                 callToAction: "Visit live site",
                 url: "http://configurator.rainierlaan.nl"
             },
-            // {
-            //     callToAction: "Read about my journey",
-            //     url: ""
-            // },
-            // {
-            //     callToAction: "Source Code",
-            //     url: ""
-            // }
+            {
+                callToAction: "GitHub",
+                url: "https://github.com/LinhNguyen-511/configurator"
+            }
         ],
         techs: [
             {
@@ -81,10 +77,6 @@ let projects = [
         `,
         imageUrl: "https://i.ibb.co/XsQ3Jvn/Screenshot-from-2021-08-23-13-14-31.png",
         links: [
-            // {
-            //     callToAction: "Read about my journey",
-            //     url: ""
-            // },
             {
                 callToAction: "GitHub",
                 url: "https://github.com/LinhNguyen-511/portfolio-blog"

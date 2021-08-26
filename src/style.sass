@@ -67,8 +67,8 @@ a, button
             text-stroke: 2px $red
             -webkit-text-stroke: 2px $red
             color: $light-theme-color
-            font-size: 50px
-            letter-spacing: 25px
+            font-size: 5vw
+            letter-spacing: 5vw
 
 #main-container
     height: 100%
@@ -107,8 +107,6 @@ a, button
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-template-rows: repeat(2, 1fr)
-        width: 50px
-        height: 50px    
         text-align: center
 
         p   
@@ -207,10 +205,6 @@ a, button
             display: flex
             .tech
                 animation: none
-                width: 3%
-            .tech-logo
-                height: 30px
-                width: 30px
 
         .project-teaser 
             width: 80vw
@@ -224,8 +218,6 @@ a, button
                 position: relative
                 color: white
                 background-color: $red
-                width: 60vw
-                height: 60vh
 
                 .project-info-title
                     font-style: italic
@@ -265,9 +257,13 @@ a, button
     width: 99vw
     height: 100vh
     
+    #summary
+        z-index: 5
+
     .about-me-title
         color: $coal-black
         text-decoration: underline
+
 .tech    
     position: relative
     display: flex
@@ -279,8 +275,6 @@ a, button
     .tech-logo
         width: 25%
         height: auto
-        // width: 50px
-        // height: 50px
         object-fit: contain
 
     .tooltip 
@@ -299,8 +293,6 @@ a, button
             display: block
             visibility: visible
             
-
-    
 .lineParent
     overflow: hidden
     .lineChildren
@@ -350,11 +342,16 @@ a, button
 
 /* RESPONSIVE 
 // Mobile
+// max 480px
 @media (max-width: $screen-xs)   
     #menu-bar
         .section-anchor
             display: none
   
+        .logo
+            width: 10vw
+            height: 10vw
+
         p, button
             font-size: 10px
 
@@ -364,59 +361,78 @@ a, button
         border-radius: 5px
         background: $light-theme-color
 
-        &:hover
-            background: $red
-            color: white          
-
-    .project-teaser-counter
-        top: 0 !important
-
     .intro.section.wrapper 
         display: flex
         justify-content: center
         align-items: center
 
+        .intro-text
+            span
+                font-size: 5vw
+
     .intro-animation-container       
-        display: none   
+        display: none       
+
+    .project-teaser-counter
+        top: 0 !important
+
+    .project-techstack
+        .tech
+            width: 10vw
+            .tech-logo
+                width: 5vw
+                height: auto
 
     .project-teaser
         .project-info
             overflow-y: scroll
-        h1
-            font-size: 20px    
-        h2
-            font-size: 15px
-        p
-            font-size: 10px      
+            width: 60vw
+            height: 50vh
 
-        .project-link a
-            font-size: 10px
+            h1
+                font-size: 3vw    
+            h2
+                font-size: 3vw
+            p
+                font-size: 2vw   
+                margin-bottom: 0   
+
+            .project-link a
+                font-size: 2vw                          
 
     .about.section
         display: flex
         align-items: center
         justify-content: center
 
-    .tech
-        display: none
-
     .background-grid 
         text-align: center    
+        .tech
+            display: none
 
-    #summary
-        font-size: 20px  
-        .objective
-            font-family: "Bai Jamjuree"
-            font-weight: bolder
-        
-        &.is-reveal 
-            opacity: 1
+        #summary
+            font-size: 5vw
+            .objective
+                font-family: "Bai Jamjuree"
+                font-weight: bolder
 
+            &.is-reveal 
+                opacity: 1
 
+    #footer
+        p
+            font-size: 5vw        
+
+// 480 - 600px
 @media (min-width: $screen-xs)
     #menu-bar
+        .logo
+            width: 10vw
+            height: 10vw
+
         p, button
-            font-size: 8px
+            font-size: 2vw    
+
         .contact-button
             border: 2px solid $red
             color: $red
@@ -444,18 +460,32 @@ a, button
         h2
             font-size: 15px      
       
+    .project-techstack
+        .tech
+            width: 10vw
+            .tech-logo
+                width: 5vw
+                height: auto
+
     .project-teaser
         .project-info
             overflow-y: scroll
-        h1
-            font-size: 20px    
-        h2
-            font-size: 15px
-        p
-            font-size: 10px      
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 60vw
+            height: 60vh
 
-        .project-link a
-            font-size: 10px
+            h1
+                font-size: 80%    
+            h2
+                font-size: 65%
+            p
+                font-size: 60%   
+                margin-bottom: 0   
+
+            .project-link a
+                font-size: 80%           
 
     .background-grid 
         display: grid
@@ -480,6 +510,7 @@ a, button
       
 
 // Desktop 
+// 600 -768px 
 @media (min-width: $screen-s)
     #menu-bar
         p, button
@@ -487,30 +518,40 @@ a, button
 
     .intro-text 
         max-width: 75%
+        
         span
-            font-size: 30px
+            font-size: 25px
     
-    .project-teaser
-        .project-info
-            overflow-y: scroll
-            display: flex
-            flex-direction: column
-            justify-content: center
-        h1
-            font-size: 20px    
-        h2
-            font-size: 15px
-        p
-            font-size: 10px   
-            
-        .project-link a
-            font-size: 15px  
-
+// 768 - 992px
 @media (min-width: $screen-m)    
     #menu-bar
+        .logo
+            width: 50px
+            height: 50px 
+            
         p, button
             font-size: 15px       
 
+    .project-techstack
+        .tech
+            width: 5vw
+            .tech-logo
+                width: 3vw
+                height: auto
+
+    .project-teaser
+        .project-info
+            h1
+                font-size: 15px    
+            h2
+                font-size: 13px
+            p
+                font-size: 10px     
+
+            .project-link a
+                font-size: 13px           
+
+// 992px - 1200px 
 @media (min-width: $screen-l)
     .intro.section.wrapper 
         display: flex
@@ -519,30 +560,36 @@ a, button
         justify-content: space-between
 
     .intro-animation-container 
-        width: 400px
-        height: 400px
+        width: 350px
+        height: 350px
 
     .intro-text 
         max-width: 50%
         span
-            font-size: 30px
+            font-size: 25px
+
+    .project-techstack
+        .tech
+            width: 3vw
+            .tech-logo
+                width: 2vw
+                height: auto
 
     .project-teaser
         .project-info
-            overflow-y: hidden
-        h1
-            font-size: 30px    
-        h2
-            font-size: 25px
-        p
-            font-size: 20px   
-    #summary
-        font-size: 20px          
+            h1
+                font-size: 2vw   
+            h2
+                font-size: 1.5vw
+            p
+                font-size: 1vw  
+            .project-link a
+                font-size: 1vw             
 
 
 @media (min-width: $screen-xl)              
     .intro-text 
         span
-            font-size: 40px
+            font-size: 30px
     #summary
-        font-size: 25px         
+        font-size: 20px         

@@ -17,7 +17,7 @@ function Intro() {
 			animationData: animation,
 		});
 		return () => anim.destroy(); // optional clean up for unmounting
-	}, []);
+	});
 
 	const introSecondaryText =
 		"I build attractive, scalable and robust webapps";
