@@ -32,7 +32,7 @@ function Intro() {
 					revealDelay={0}
 					characters={"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"}
 				>
-					The Front-end developer you are looking for
+					The Web developer you are looking for
 				</Baffle>
 				<h2 className="split-text">
 					<SplitText string={introSecondaryText} delay={2}></SplitText>
