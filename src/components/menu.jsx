@@ -33,7 +33,7 @@ function MenuBar() {
 					</a>
 				</p>
 				<p>
-					<a href="./../CV-LinhNguyen.pdf" download>
+					<a href="./../CV_LinhNguyen.pdf" download>
 						Download my CV
 					</a>
 				</p>
