@@ -65,7 +65,6 @@ function Projects() {
 					
 				</div>
 
-				{/* <a href="" className="github-link">More on my GitHub</a> */}
 			</div>
 		</section>
 	);

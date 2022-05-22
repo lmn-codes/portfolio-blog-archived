@@ -42,16 +42,11 @@ function Techstack() {
 			<p ref={ref} id="summary" className={cn({ "is-reveal": reveal })}>
 				<span className="about-me-title">About me</span> <br />
 				<span className="about-me">
-					Although any area within web development is my playground, I
-					have the most fun crafting features and implementing
-					advanced design. Because of that, I always aim for a
-					pleasant, intuitive and attractive user experience
+					A front-end developer with proven background in the Fintech and E-commerce industry. 
 				</span>
 				<br />
 				<span className="objective">
-					I am looking for an opportunity to work on complex projects
-					with large user base as I want to explore topics like: state
-					management, security and interactice websites
+					Curious and actively learning back-end development. Looking for an opportunity to grow as a versatile full-stack developer, solving problems from all ends.
 				</span>
 			</p>
 

@@ -32,11 +32,6 @@ function MenuBar() {
 						GitHub
 					</a>
 				</p>
-				<p>
-					<a href="./../CV_LinhNguyen.pdf" download>
-						Download my CV
-					</a>
-				</p>
 
 				<div className="menu-contacts">
 					<button className="contact-button" onClick={()=>setShowMenu(!showMenu)}>
